@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Colby Martin: Github Activity Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="TrackerApp">
+    <h1>Github Activity Tracker</h1>
+    <section ng-controller="UserInputController">
+        <input type='text' placeholder="Enter Username" ng-model="user_input">
+        <button ng-click="add()">Add</button>
+    </section>
+    <section ng-controller="UserListController">
+        <ul>
+            <li ng-repeat="profile in profiles">
+                <img ng-src="{{profile.picture}}">
+                <h3>{{profile.name}}</h3>
+                <p>{{profile.handle}}</p>
+            </li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
