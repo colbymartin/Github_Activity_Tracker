@@ -13,12 +13,13 @@ app.controller('UserListController', function ($scope, GitService) {
     $scope.profiles = GitService.getProfiles();
 });
 
+app.controller('ActivityController', function ($scope, GitService) {
+
+});
+
 app.factory('GitService', function ($http) {
     let profiles = [];
-
-    // $http.get('https://api.github.com/users/anyweez').then(function (response) {
-    //     console.log(response);
-    // });
+    let activity = [];
 
     return {
         getProfiles() {
@@ -35,7 +36,38 @@ app.factory('GitService', function ($http) {
                     name: log.name,
                 })
 
-            }); 
-        }
+            });
+            $http.get('https://api.github.com/users/' + user + '/events').then(function (response) {
+                console.log(response);
+                let log = response.data;
+                console.log(new Date(Date.now()));
+                console.log(new Date(Date.parse(log[0].created_at)));
+                console.log(new Date(Date.getDate()));
+
+
+                // activity.push({
+                //     week: '',
+                //     month: function (log) {
+                //         for (let i = 0; i < log.length; i++) {
+                //             console.log('')
+                //         }
+                //     },
+                //     history: '',
+                // })
+
+            });
+        },
+        // getActivity(id){
+        //     $http.get('https://api.github.com/users/' + id + '/events').then(function (response) {
+        //         console.log(response);
+        //     })
+        // }
     }
+});
+
+app.component('gitProfile', {
+    templateUrl: 'templates/profile.html',
+    bindings: {
+        which: '<',
+    },
 });
