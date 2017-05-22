@@ -1,0 +1,17 @@
+.display {
+    ul {
+        list-style: none;
+        margin: none;
+        li {
+            img {
+                width: 50px;
+            }
+            h3 {
+                display: inline-block;
+            }
+            .handle {
+                display: inline-block;
+            }
+        }
+    }
+}

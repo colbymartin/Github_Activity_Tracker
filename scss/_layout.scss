@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    @include grid-row();
+    .search {
+        @include grid-column(12);
+    }
+    .display {
+        @include grid-column(12);
+    }
+}

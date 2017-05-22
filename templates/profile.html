@@ -1,5 +1,6 @@
 <li>
     <img ng-src="{{$ctrl.which.picture}}">
     <h3>{{$ctrl.which.name}}</h3>
-    <p>{{$ctrl.which.handle}}</p>
+    <p class='handle'>({{$ctrl.which.handle}})</p>
+    <activity which="$ctrl.which.activity"></activity>
 </li>

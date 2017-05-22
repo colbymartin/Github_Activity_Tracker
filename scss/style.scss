@@ -2,3 +2,7 @@
 
 @include foundation-global-styles;
 @include foundation-grid; 
+
+@import 'layout';
+@import 'search';
+@import 'display';

@@ -1,0 +1,44 @@
+<li>
+    <p>
+        <span ng-if="$ctrl.which.week <= 5">
+            Week: ❄
+        </span>
+        <span ng-if="$ctrl.which.week > 5 && $ctrl.which.week <=10">
+            Week: 🔥 
+        </span>
+        <span ng-if="$ctrl.which.week > 10 && $ctrl.which.week <=20">
+            Week: 🔥🔥
+        </span>
+        <span ng-if="$ctrl.which.week > 20">
+            Week: 🔥🔥🔥
+        </span>
+    </p>
+    <p>
+        <span ng-if="$ctrl.which.month <= 20">
+            Month: ❄
+        </span>
+        <span ng-if="$ctrl.which.month > 20 && $ctrl.which.month <=40">
+            Month: 🔥 
+        </span>
+        <span ng-if="$ctrl.which.month > 40 && $ctrl.which.month <=100">
+            Month: 🔥🔥
+        </span>
+        <span ng-if="$ctrl.which.month > 100">
+            Month: 🔥🔥🔥
+        </span>
+    </p>
+    <p>
+        <span ng-if="$ctrl.which.time <= 99">
+            All-Time: ❄
+        </span>
+        <span ng-if="$ctrl.which.time > 99 && $ctrl.which.time <=199">
+            All-Time: 🔥 
+        </span>
+        <span ng-if="$ctrl.which.time > 199 && $ctrl.which.time <=299">
+            All-Time: 🔥🔥
+        </span>
+        <span ng-if="$ctrl.which.time > 299">
+            All-Time: 🔥🔥🔥
+        </span>
+    </p>
+</li>
