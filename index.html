@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="http://momentjs.com/downloads/moment.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="app.js"></script>
 </head>
 
 <body ng-app="TrackerApp">
-    <h1>Github Activity Tracker</h1>
+    <h1>Github Heat-Check</h1>
+    <h3>Enter a Github Username to See Their Acitivity</h3>
     <div>
         <section class="search" ng-controller="UserInputController">
             <input type='text' placeholder="Enter Username" ng-model="user_input">
